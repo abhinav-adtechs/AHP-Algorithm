@@ -11,6 +11,6 @@ public class AppController extends Application {
     public void onCreate() {
         super.onCreate();
 
-        FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/FuturaMedium.ttf");
+        FontsOverride.setDefaultFont(this, "MONOSPACE", "fonts/futuramediumbt.ttf");
     }
 }

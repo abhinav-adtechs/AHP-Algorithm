@@ -12,7 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.abhinavlabs.ahp_algorithm.R;
 
-public class MainActivity extends BaseActivity{
+public class MainParametersActivity extends BaseActivity{
 
 
     @BindView(R.id.activity_main_toolbar)
@@ -21,25 +21,27 @@ public class MainActivity extends BaseActivity{
     @BindView(R.id.activity_main_btn_next)
     Button btnNext ;
 
-    MainActivity mainActivity ;
+    MainParametersActivity mainParametersActivity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_parameters);
 
         ButterKnife.bind(this) ;
-        mainActivity = this ;
+        mainParametersActivity = this ;
 
         setSupportActionBar(toolbarMain);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mainActivity, ApplicantsCountActivity.class) ;
+                Intent intent = new Intent(mainParametersActivity, ApplicantsCountActivity.class) ;
                 startActivity(intent);
             }
         });
+
+
     }
 }
