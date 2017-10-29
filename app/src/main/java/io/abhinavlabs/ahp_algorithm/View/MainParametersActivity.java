@@ -30,6 +30,7 @@ public class MainParametersActivity extends BaseActivity{
         setContentView(R.layout.activity_parameters);
 
         ButterKnife.bind(this) ;
+
         mainParametersActivity = this ;
 
         setSupportActionBar(toolbarMain);

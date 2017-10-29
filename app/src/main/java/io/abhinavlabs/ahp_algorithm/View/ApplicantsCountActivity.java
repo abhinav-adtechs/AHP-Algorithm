@@ -13,7 +13,7 @@ import io.abhinavlabs.ahp_algorithm.R;
 
 public class ApplicantsCountActivity extends BaseActivity{
 
-    @BindView(R.id.activity_main_btn_next)
+    @BindView(R.id.activity_applicants_count_next)
     Button btnNext ;
 
     ApplicantsCountActivity applicantsCountActivity ;
@@ -33,6 +33,7 @@ public class ApplicantsCountActivity extends BaseActivity{
             public void onClick(View v) {
 
                 Intent intent = new Intent(applicantsCountActivity, ApplicantsInputActivity.class) ;
+
                 startActivity(intent);
             }
         });
