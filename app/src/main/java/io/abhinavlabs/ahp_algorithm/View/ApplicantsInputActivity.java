@@ -33,6 +33,8 @@ public class ApplicantsInputActivity extends BaseActivity {
     ApplicantsAdapter applicantsAdapter ;
     List<ApplicantAttributes> applicantAttributesList ;
 
+    int counter = 0 ;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,9 @@ public class ApplicantsInputActivity extends BaseActivity {
         getSupportActionBar().setElevation(0);
         getSupportActionBar().setTitle("Evaluation Sheet");
 
+        if (getIntent().hasExtra("count")){
+            counter = getIntent().getIntExtra("count", 4) ;
+        }
 
         setRv() ;
     }
@@ -68,11 +73,10 @@ public class ApplicantsInputActivity extends BaseActivity {
     }
 
     private void addToList() {
-        applicantAttributesList.add(new ApplicantAttributes(1, "Abhinav Das")) ;
-        applicantAttributesList.add(new ApplicantAttributes(2, "Abhinav Das")) ;
-        applicantAttributesList.add(new ApplicantAttributes(3, "Abhinav Das")) ;
-        applicantAttributesList.add(new ApplicantAttributes(4, "Abhinav Das")) ;
-        applicantAttributesList.add(new ApplicantAttributes(5, "Abhinav Das")) ;
+
+        for (int i = 0; i < counter; i++) {
+            applicantAttributesList.add(new ApplicantAttributes(i, "Deepthi Kamani")) ;
+        }
 
         applicantsAdapter.notifyDataSetChanged();
     }
