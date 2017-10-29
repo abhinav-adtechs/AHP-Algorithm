@@ -1,6 +1,7 @@
 package io.abhinavlabs.ahp_algorithm.View;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -86,6 +87,8 @@ public class ApplicantsInputActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int i = item.getItemId() ;
+        Intent intent = new Intent(this, ResultsActivity.class) ;
+        startActivity(intent);
 
         return super.onOptionsItemSelected(item);
     }

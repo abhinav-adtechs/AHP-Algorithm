@@ -21,6 +21,7 @@
         <activity android:name=".View.ApplicantsCountActivity">
         </activity>
         <activity android:name=".View.ApplicantsInputActivity" />
+        <activity android:name=".View.ResultsActivity" />
     </application>
 
 </manifest>
