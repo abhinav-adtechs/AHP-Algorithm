@@ -32,7 +32,7 @@ public class ApplicantsAdapter extends RecyclerView.Adapter<ApplicantsAdapter.Ap
 
     @Override
     public void onBindViewHolder(ApplicantViewHolder holder, int position) {
-        holder.tvApplicantNummber.setText("Applicant " + position+1 );
+        holder.tvApplicantNummber.setText("Applicant " + (position+1) );
     }
 
     @Override

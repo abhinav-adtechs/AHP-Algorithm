@@ -7,6 +7,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SnapHelper;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +26,9 @@ public class ApplicantsInputActivity extends BaseActivity {
     @BindView(R.id.activity_applications_input_rv)
     RecyclerView rvApplicants ;
 
+    @BindView(R.id.activity_application_input_toolbar)
+    Toolbar toolbar ;
+
     ApplicantsAdapter applicantsAdapter ;
     List<ApplicantAttributes> applicantAttributesList ;
 
@@ -33,6 +39,11 @@ public class ApplicantsInputActivity extends BaseActivity {
         setContentView(R.layout.activity_applications_input);
 
         ButterKnife.bind(this) ;
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(0);
+        getSupportActionBar().setTitle("Evaluation Sheet");
+
 
         setRv() ;
     }
@@ -63,6 +74,20 @@ public class ApplicantsInputActivity extends BaseActivity {
         applicantAttributesList.add(new ApplicantAttributes(5, "Abhinav Das")) ;
 
         applicantsAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.navigation_input, menu);
+        return true ;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int i = item.getItemId() ;
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
